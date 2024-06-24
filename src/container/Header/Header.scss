@@ -8,6 +8,7 @@
   // disable the default padding styles
   .app__wrapper {
     padding: 0;
+    box-sizing: border-box;
 
     .copyright {
       display: none;

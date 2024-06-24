@@ -1,4 +1,4 @@
-
+import React from 'react'
 import './App.scss'
 import { About, Footer, Header, Skills, Work } from './container'
 import { Navbar } from './components'
