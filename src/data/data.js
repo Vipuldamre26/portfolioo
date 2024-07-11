@@ -7,7 +7,7 @@ const projects = [
     {
         id: 1,
         title: 'Crypto Analyser',
-        description: 'hello from crypto',
+        description: '',
         imgUrl: imgUrl1,
         projectLink: 'https://crypto-app-three-livid.vercel.app/',
         codeLink: 'https://github.com/Vipuldamre26/Crypto_App',
@@ -16,7 +16,7 @@ const projects = [
     {
         id: 1,
         title: 'Crypto Analyser',
-        description: 'hello from crypto',
+        description: '',
         imgUrl: imgUrl2,
         projectLink: 'https://crypto-app-three-livid.vercel.app/',
         codeLink: 'https://github.com/Vipuldamre26/Crypto_App',
@@ -25,7 +25,7 @@ const projects = [
     {
         id: 1,
         title: 'Crypto Analyser',
-        description: 'hello from crypto',
+        description: '',
         imgUrl: imgUrl3,
         projectLink: 'https://crypto-app-three-livid.vercel.app/',
         codeLink: 'https://github.com/Vipuldamre26/Crypto_App',
@@ -33,11 +33,11 @@ const projects = [
     },
     {
         id: 1,
-        title: 'Crypto Analyser',
-        description: 'hello from crypto',
+        title: 'Amazon Clone',
+        description: '',
         imgUrl: imgUrl4,
-        projectLink: 'https://crypto-app-three-livid.vercel.app/',
-        codeLink: 'https://github.com/Vipuldamre26/Crypto_App',
+        projectLink: 'https://alex21c.github.io/AmazonClone/homepage/index.html',
+        codeLink: 'https://github.com/Alex21c/AmazonClone',
         tags: ['UI/UX'],
     },
 ]

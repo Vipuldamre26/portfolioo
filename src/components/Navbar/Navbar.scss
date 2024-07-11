@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
 .app__navbar {
     width: 100%;
 
@@ -5,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     background: rgba(255, 255, 255, 0.25);
     // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur(4px);
@@ -20,14 +24,20 @@
     justify-content: flex-start;
     align-items: center;
 
-    img {
-        width: 160px;
-        height: 40px;
+    // img {
+    //     width: 160px;
+    //     height: 40px;
 
-        @media screen and (max-width: 450px) {
-            width: 100px;
-            height: 25px;
-        }
+    //     @media screen and (max-width: 450px) {
+    //         width: 100px;
+    //         height: 25px;
+    //     }
+    // }
+
+    p{
+        font-family: "Great Vibes", cursive;
+        font-size: 3rem;
+        font-weight: 500;
     }
 }
 

@@ -15,6 +15,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
 
   const handleWorkFilter = (item) => {
+    // console.log(item);
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
 
@@ -25,13 +26,14 @@ const Work = () => {
         setFilterWork(projects);
       } else {
         setFilterWork(projects.filter((work) => work.tags.includes(item)));
+        // console.log(filterWork);
       }
     }, 500);
   };
 
   useEffect(() => {
     setFilterWork(projects);
-  }, [filterWork])
+  }, [])
 
 
   return (

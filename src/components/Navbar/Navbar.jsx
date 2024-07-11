@@ -13,7 +13,8 @@ const Navbar = () => {
         // desktop view 
         <nav className="app__navbar">
             <div className="app__navbar-logo">
-                <img src={images.logo} alt="" />
+                {/* <img src={images.logo} alt="" /> */}
+                <p>Vipul</p>
             </div>
             <ul className="app__navbar-links">
                 {['home', 'about', 'work', 'skills', 'contact'].map((item) => {
