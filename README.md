@@ -1,5 +1,3 @@
 # React + Vite
 
-<<<<<<< HEAD
-## (Hosted Link)[https://vipulll-portfolio.vercel.app/]
-=======
+## [Hosted Link](https://vipulll-portfolio.vercel.app/)
