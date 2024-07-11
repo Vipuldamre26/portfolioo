@@ -4,7 +4,48 @@ import './Skills.scss';
 
 const Skills = () => {
   return (
-    <div>Skills</div>
+    <div>
+    Skills
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    <div className="hello">
+      hello
+    </div>
+    </div>
   )
 }
 
