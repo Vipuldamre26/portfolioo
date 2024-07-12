@@ -3,6 +3,8 @@ import './Navbar.scss'
 import { images } from "../../constants";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+import resume from '../../assets/Vipul_Damre_Resume.pdf';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Navbar = () => {
 
@@ -25,6 +27,9 @@ const Navbar = () => {
                     )
                 })}
             </ul>
+            <div className="resume">
+                <a href={resume} download>Resume <i class="bi bi-download"></i></a>
+            </div>
 
 
             {/* mobile view  */}
@@ -40,14 +45,22 @@ const Navbar = () => {
                             <HiX onClick={() => setToggle(false)} />
 
                             <ul>
-                                {['home', 'about', 'work', 'skills', 'contact'].map((item) => {
+                                {['home', 'about', 'work', 'skills', 'contact', 'resume'].map((item) => {
                                     return (
                                         <li key={item}>
-                                            <a href={`#${item}`} onClick={() => setToggle(false)}  >{item}</a>
+                                            {
+                                                item === 'resume' ? <a href={ resume } download>{item}</a> :
+                                                    <a href={`#${item}`} onClick={() => setToggle(false)}  >{item}</a>
+                                            }
                                         </li>
                                     )
                                 })}
+
+                                <li><a href={resume} download></a></li>
+
+
                             </ul>
+
 
                         </motion.div>
                     )
