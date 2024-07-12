@@ -1,34 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './Footer.scss';
 
-import { useState, useEffect } from "react";
 // npm install react-hook-form @web3forms/react
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   const [loading, setLoading] = useState(false);
-
-  const { username, email, message } = formData;
-
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-
-
-  const {register, reset, handleSubmit} = useForm();
+  const { register, reset, handleSubmit } = useForm();
 
   const [isSuccess, setIsSuccess] = useState(false);
   const [result, setResult] = useState(null);
 
-  const accessKey = "YOUR_ACCESS_KEY_HERE";
+  const accessKey = "bf955e0c-a750-477b-917b-d2b4fbb08505";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: accessKey,
@@ -40,6 +28,7 @@ const Footer = () => {
     onSuccess: (msg, data) => {
       setIsSuccess(true);
       setResult(msg);
+      setLoading(true);
       reset();
     },
     onError: (msg, data) => {
@@ -64,13 +53,15 @@ const Footer = () => {
         </div> */}
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {
 
-        <input className="p-text" type="text" placeholder="Your Name" name="username" {...register("name", { required: true })}/>
+      !loading ? 
+      
+      (
+        <form className='form' onSubmit={handleSubmit(onSubmit)}>
 
+        <input className="p-text" type="text" placeholder="Your Name" name="username" {...register("name", { required: true })} />
         <input className="p-text" type="email" placeholder="Your Email" name="email" {...register("email", { required: true })} />
-
-
         <textarea
           className="p-text"
           placeholder="Your Message"
@@ -80,6 +71,16 @@ const Footer = () => {
 
         <button type="submit" className="p-text" >{!loading ? 'Send Message' : 'Sending...'}</button>
       </form>
+      ) : (
+        <div>
+          <h3 className="head-text">
+            Thank you for getting in touch!
+          </h3>
+        </div>
+      )
+
+      }
+
 
 
 
