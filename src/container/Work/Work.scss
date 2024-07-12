@@ -1,4 +1,6 @@
-
+.work{
+  margin-top: 2.4rem;
+}
 
 .app__works {
     flex: 1;
@@ -71,6 +73,22 @@
         padding: 1.25rem;
         border-radius: 0.75rem;
       }
+
+  
+      @media screen and (max-width: 790px) {
+        width: 250px;
+        margin: 1rem;
+      }
+  
+      @media screen and (max-width: 758px) {
+        width: 200px;
+        margin: 1rem;
+      }
+  
+      @media screen and (max-width: 645px) {
+        width: 100%;
+        margin: 1rem;
+      }
   
       @media screen and (max-width: 300px) {
         width: 100%;
@@ -95,6 +113,17 @@
     @media screen and (min-width: 2000px) {
       height: 350px;
     }
+
+      
+    @media screen and (max-width: 790px) {
+      height: 200px;
+    }
+
+    @media screen and (max-width: 758px) {
+      // height: 180px;
+      width: 100%;
+    }
+
   }
   
   .app__work-hover {

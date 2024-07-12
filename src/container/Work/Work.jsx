@@ -3,7 +3,7 @@ import './Work.scss';
 
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import projects from '../../data/data';
 
 
@@ -23,21 +23,21 @@ const Work = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === 'All') {
-        setFilterWork(projects);
+        setFilterWork(projects.projects);
       } else {
-        setFilterWork(projects.filter((work) => work.tags.includes(item)));
+        setFilterWork(projects.projects.filter((work) => work.tags.includes(item)));
         // console.log(filterWork);
       }
     }, 500);
   };
 
   useEffect(() => {
-    setFilterWork(projects);
+    setFilterWork(projects.projects);
   }, [])
 
 
   return (
-    <div id='work'>
+    <div className='work'>
       <h2 className='head-text'>
         My Creative
         <span> Projects </span>
@@ -65,8 +65,8 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className='app__work-portfolio'
       >
-        {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+        {filterWork.map((work) => (
+          <div className="app__work-item app__flex" key={work.id}>
             <div
               className="app__work-img app__flex"
             >
@@ -116,4 +116,8 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work, 'work');
+export default AppWrap(
+  MotionWrap(Work, 'app__work'), 
+  'work',
+  'app__primarybg'
+);
